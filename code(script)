@@ -1,0 +1,35 @@
+// Iterative method for factorial calculation
+function factorialIterative(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+// Recursive method for factorial calculation
+function factorialRecursive(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorialRecursive(n - 1);
+}
+
+// Function to calculate factorial
+function calculateFactorial() {
+    let num = document.getElementById("number").value;
+    let resultText = document.getElementById("result");
+
+    // Input Validation
+    if (num === "" || num < 0 || isNaN(num)) {
+        resultText.innerHTML = "❌ Please enter a valid positive number.";
+        return;
+    }
+
+    num = parseInt(num);
+    let iterativeResult = factorialIterative(num);
+    let recursiveResult = factorialRecursive(num);
+
+    resultText.innerHTML = `
+        ✅ <strong>Iterative:</strong> ${iterativeResult} <br>
+        ✅ <strong>Recursive:</strong> ${recursiveResult}
+    `;
+}
