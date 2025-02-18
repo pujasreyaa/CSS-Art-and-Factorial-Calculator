@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Art & Factorial Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Art Showcase & Factorial Calculator</h1>
+    </header>
+
+    <!-- Section for CSS Art -->
+    <section id="css-art">
+        <h2>CSS Art Designs</h2>
+        <div class="art-container">
+            <div class="heart"></div>
+            <div class="star"></div>
+        </div>
+    </section>
+
+    <!-- Section for Factorial Calculator -->
+    <section id="factorial-calculator">
+        <h2>Factorial Calculator</h2>
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" min="0">
+        <button onclick="calculateFactorial()">Calculate</button>
+        <p id="result"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 CSS Art & Factorial Calculator | Designed by Puja Sreyaa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
